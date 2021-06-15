@@ -15,7 +15,7 @@ body {
   font-family: sans-serif;
   height: 100%;
   margin: 0;
-  background: #261c33;
+  background: #405063bd;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -23,7 +23,7 @@ body {
 }
 
 h2 {
-  color: #8d81f3;
+  color: #42b983;
   text-align: center;
   font-size: 40px;
   margin: 20px;
@@ -52,16 +52,17 @@ section.settings {
 }
 .box-container {
   padding: 50px;
-  border: 1px solid #8d81f3;
+  border: 1px solid #42b983;
 }
 .box {
   width: 150px;
   height: 150px;
-  background: #8d81f3;
+  text-align: center;
+  background: #42b983;
 }
 
 button {
-  background-color: #8d81f3;
+  background-color: #42b983;
   color: #fff;
   display: inline-block;
   font-size: 20px;
@@ -72,5 +73,9 @@ button {
 }
 
 label {
+  background: #42b983;
+  border: 1px solid #42b983;
+  /* padding: 3px; */
+  border-radius: 8%;
   color: #fff;
 }
