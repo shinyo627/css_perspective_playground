@@ -11,31 +11,49 @@
       <main>
         <section class="settings">
           <div class="settings-container">
-            <label>perspective: 0px;</label>
+            <label>perspective: {{perspective}}px;</label>
             <input
               type="range"
               min="0"
               max="999"
-              :value="range"
-              @click="setRange"
+              :value="perspective"
+              @click.prevent="setPerspective"
             />
 
-            <label>rotateX: 0deg; </label>
-            <input type="range" min="-180" max="180" />
+            <label>rotateX: {{x}}deg; </label>
+            <input
+              type="range"
+              min="-180"
+              max="180"
+              :value="x"
+              @click.prevent="setX"
+            />
 
-            <label>rotateY: 0deg; </label>
-            <input type="range" min="-180" max="180" />
+            <label>rotateY: {{y}}deg; </label>
+            <input
+              type="range"
+              min="-180"
+              max="180"
+              :value="y"
+              @click.prevent="setY"
+            />
 
-            <label>rotateZ: 0deg; </label>
-            <input type="range" min="-180" max="180" />
+            <label>rotateZ: {{z}}deg; </label>
+            <input
+              type="range"
+              min="-180"
+              max="180"
+              :z="z"
+              @click.prevent="setZ"
+            />
 
-            <button type="button">Reset</button>
+            <button type="button" @click.prevent="reset">Reset</button>
             <button type="button">Copy</button>
           </div>
         </section>
         <section class="output">
           <div class="box-container">
-            <div class="box"></div>
+            <div class="box" :style="[box_styles]"></div>
           </div>
         </section>
       </main>
